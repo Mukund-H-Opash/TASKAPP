@@ -12,4 +12,4 @@ const taskSchema = new mongoose.Schema({
   user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
 }, { timestamps: true });
 
-export default mongoose.model('Task', taskSchema);
+export default mongoose.model('Task', taskSchema); 

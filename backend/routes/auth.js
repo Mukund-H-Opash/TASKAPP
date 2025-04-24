@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 
 const router = express.Router();
 
-router.post('/signup', async (req, res) => {
+router.post('/api/v1/signup', async (req, res) => {
   const { name, email, password } = req.body;
   try {
     const exists = await User.findOne({ email });
@@ -17,7 +17,7 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-router.post('/login', async (req, res) => {
+router.post('/api/v1/login', async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.findOne({ email });
